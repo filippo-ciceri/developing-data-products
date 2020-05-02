@@ -1,0 +1,24 @@
+---
+title: "Best places in Barcelona"
+author: "Filippo Ciceri"
+date: "5/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## At the moment the best places in Barcelona are these...
+### May 2nd 2020 16:35
+
+```{r, echo=FALSE}
+df <- data.frame(lat=c(41.363252,41.390610,41.387548),
+                 lon=c(2.165284,2.202379,2.169991))
+
+df %>% 
+    leaflet() %>%
+    addTiles() %>%
+    addMarkers()
+```
