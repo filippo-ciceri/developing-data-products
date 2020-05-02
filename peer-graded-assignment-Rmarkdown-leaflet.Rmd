@@ -15,10 +15,11 @@ library(leaflet)
 
 ```{r, echo=FALSE}
 df <- data.frame(lat=c(41.363252,41.390610,41.387548),
-                 lon=c(2.165284,2.202379,2.169991))
+                 lon=c(2.165284,2.202379,2.169991),
+                 popup=c('Montjuic Castle','Barceloneta Beach','Plaza Catalunya'))
 
 df %>% 
     leaflet() %>%
     addTiles() %>%
-    addMarkers()
+    addMarkers(popup = df$popup)
 ```
