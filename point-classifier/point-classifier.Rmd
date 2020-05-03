@@ -1,0 +1,23 @@
+---
+title: "Point-classifier Documentation"
+author: "Filippo Ciceri"
+date: "5/3/2020"
+output: html_document
+---
+
+**Name of the app: ** point-classifier
+
+**App type: *** ShinyApp
+
+**App title: ** Point Classfier
+
+**Description: **This shinyapp classify random points according to a k-means cultering algorithm.
+
+**Instructions: **Use the sliders on the left handside to define the total number of points, their standard
+                  deviations along the X and Y axes and the number of clusters. Then press "Generate points"
+                  to populate the dotplot. Finally press the button "Add clusters" to visualize the centroids
+                  and visualize the n clusters.
+                  
+**Author: **Filippo Ciceri <email@email.com>
+
+**Maintainer: **Filippo Ciceri <email@email.com>
