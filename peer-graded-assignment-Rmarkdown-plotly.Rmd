@@ -1,5 +1,5 @@
 ---
-title: "A fancy 3D graph made with plotly"
+title: "A fancy graph made with plotly"
 author: "Filippo Ciceri"
 date: "5/3/2020"
 output: ioslides_presentation
@@ -17,9 +17,5 @@ library(plotly)
 matrixvector = 1:100 + rnorm(100, mean=0, sd=100)
 matrix <- matrix(rep(0,100*100),nrow=100,ncol=100)
 vector <- rnorm(100,0,1)
-matrix <- sapply(vector, function(x) {
-                 val <- rep(x,100) - c(1:100) + rnorm(100,0,1)
-                 matrix <- cbind(val)
-                 })
-plot_ly(z = ~matrix, type= "heatmap")
+plot_ly(x = ~vector, type= "histogram")
 ```
