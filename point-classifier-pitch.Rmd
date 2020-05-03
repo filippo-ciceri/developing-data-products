@@ -14,11 +14,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ## The point-classifier app
 ### General aim:
 
-The **point-classifier** app was designed to play around with k-means clustering algorithm.
+The **point-classifier** app was designed to play around with the k-means clustering algorithm.
 Let's see how!
 
 ## Step one
-The first step is to generate some random points. The user can define the total number, the standard deviation along the X and Y axis and the number of clusters. 
+The first step is to generate some random points. The user can define the amount, the standard deviation along the X and Y axis and the number of clusters. 
 
 ```{r, echo = TRUE, fig.dim=.5}
 points <- 500
@@ -44,7 +44,7 @@ points(kmeansObj$centers,pch=3,cex=3,lwd=3)
 ```
 
 ## Try yourself!
-### Play aroung with the parameters and see how clusters are identified.
+### Play around with the sliders and see how clusters are identified.
 
 ```{r, echo=TRUE}
 print("Thank you!!!")
