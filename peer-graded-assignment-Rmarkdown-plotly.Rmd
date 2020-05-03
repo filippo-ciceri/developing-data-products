@@ -1,0 +1,25 @@
+---
+title: "A fancy 3D graph made with plotly"
+author: "Filippo Ciceri"
+date: "5/3/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(plotly)
+```
+
+## I really like this graph!
+#### May 3rd 2020
+
+```{r echo=FALSE}
+matrixvector = 1:100 + rnorm(100, mean=0, sd=100)
+matrix <- matrix(rep(0,100*100),nrow=100,ncol=100)
+vector <- rnorm(100,0,1)
+matrix <- sapply(vector, function(x) {
+                 val <- rep(x,100) - c(1:100) + rnorm(100,0,1)
+                 matrix <- cbind(val)
+                 })
+plot_ly(z = ~matrix, type= "surface")
+```
