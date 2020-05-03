@@ -1,0 +1,22 @@
+\name{point-classifier}
+\docType{ShinyApp}
+\title{
+    \packageTitle{Point classifier}
+}
+\description{
+    \packageDescription{This shinyapp classify random points according to a k-means cultering algorithm.}
+}
+\details{
+    The DESCRIPTION file:
+    \packageDESCRIPTION{point-classifier}
+    \packageIndices{point-classifier}
+    ~~ Use the sliders on the left handside to define the total number of points, their standard
+       deviations along the X and Y axes and the number of clusters. Then press "Generate points" to
+       populate the dotplot. Finally press the button "Add clusters" to visualize the centroids and
+       visualize the n clusters.~~
+}
+\author{
+\packageAuthor{Filippo Ciceri <email@email.com>}
+
+Maintainer: \packageMaintainer{Filippo Ciceri <email@email.com>}
+}
