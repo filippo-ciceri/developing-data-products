@@ -1,0 +1,52 @@
+---
+title: "A Quick Intro on the point-classifier App"
+author: "Filippo Ciceri"
+date: "5/4/2020"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The point-classifier app
+### General aim:
+
+The **point-classifier** app was designed to play around with k-means clustering algorithm.
+Let's see how!
+
+## Step one
+The first step is to generate some random points. The user can define the total number, the standard deviation along the X and Y axis and the number of clusters. 
+
+```{r, echo = TRUE, fig.dim=.5}
+points <- 500
+sdX <- 2
+sdY <- 2
+gY <- 3
+gX <- 4
+
+x <- rnorm(points, 1, sdX) + 5*sample(c(1:gX),points,replace=TRUE)
+y <- rnorm(points, 1, sdY) + 5*sample(c(1:gY),points,replace=TRUE)
+plot(x,y) 
+```
+
+## Step two
+After generating the points the server identifies the clusters. 
+
+```{r, echo = TRUE, fig.dim=.5}
+df <- data.frame(x=x,
+                 y=y)
+kmeansObj <- kmeans(df,centers=gX*gY)
+plot(x=x, y=y, col=kmeansObj$cluster)
+points(kmeansObj$centers,pch=3,cex=3,lwd=3)
+```
+
+## Try yourself!
+### Play aroung with the parameters and see how clusters are identified.
+
+```{r, echo=TRUE}
+print("Thank you!!!")
+```
+
