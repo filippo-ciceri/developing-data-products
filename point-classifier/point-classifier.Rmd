@@ -7,7 +7,7 @@ output: html_document
 
 **Name of the app: ** point-classifier
 
-**App type: *** ShinyApp
+**App type: ** ShinyApp
 
 **App title: ** Point Classfier
 
