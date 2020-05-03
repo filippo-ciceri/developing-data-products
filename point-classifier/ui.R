@@ -32,7 +32,12 @@ shinyUI(fluidPage(
                         max = 5,
                         value = 2),
             actionButton("addPoints", "Generate points"),
-            actionButton("addClusters", "Add clusters")
+            actionButton("addClusters", "Add clusters"),
+            tags$a(
+                href="https://filippo-ciceri.github.io/developing-data-products/point-classifier/point-classifier.html
+",
+                'Need more information? Click here'
+            )
         ),
         mainPanel(
             plotOutput("plot1")
